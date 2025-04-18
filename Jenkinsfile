@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run bill records') {
             steps {
-                echo "Executing otp.py"
+                echo "Executing bill.py"
                 bat '''
                 call venv\\Scripts\\activate
                 python bill.py
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                echo "Running test_otp.py"
+                echo "Running test_bill.py"
                 bat '''
                 call venv\\Scripts\\activate
                 pytest test_bill.py
